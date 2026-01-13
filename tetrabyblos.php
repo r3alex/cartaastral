@@ -124,6 +124,15 @@ function tetrabyblos_get_settings(): array
     return $settings;
 }
 
+function tetrabyblos_get_template_html(array $settings): string
+{
+    if (!array_key_exists('textarea_html_output', $settings)) {
+        return '';
+    }
+
+    return (string) $settings['textarea_html_output'];
+}
+
 function tetrabyblos_load_def_file(string $basename): array
 {
     $cache_key = 'tetrabyblos_def_' . sanitize_key($basename);
@@ -204,11 +213,20 @@ function tetrabyblos_load_cities(int $limit = 0): array
 
 function tetrabyblos_render_shortcode(): string
 {
+    $settings = tetrabyblos_get_settings();
+    $template = tetrabyblos_get_template_html($settings);
+
     ob_start();
     ?>
     <div class="tetrabyblos">
         <div class="w3-content w3-center" id="TETRA_FORM"></div>
-        <div class="w3-content w3-center" id="TETRA_OUTPUT"></div>
+        <?php if ($template !== '') : ?>
+            <div class="tetrabyblos-template">
+                <?php echo wp_kses_post($template); ?>
+            </div>
+        <?php else : ?>
+            <div class="w3-content w3-center" id="TETRA_OUTPUT"></div>
+        <?php endif; ?>
     </div>
     <?php
     return (string) ob_get_clean();
