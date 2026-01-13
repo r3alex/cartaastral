@@ -1,0 +1,3 @@
+<br />
+<b>Warning</b>:  Undefined array key "year" in <b>/home/pepsfv/public_html/wp-content/plugins/Tetrabyblos/data/eclipse.php</b> on line <b>4</b><br />
+<b>Eclipses:</b><br>Total lunar eclipse... 09 January  , 23h08 UT (Moon 17.6&deg;Cnc)<br>Total lunar eclipse... 05 July  , 08h36 UT (Moon 10.1&deg;Cap)<br>Partial lunar eclipse... 29 December  , 14h31 UT (Moon 6.8&deg;Cnc)<br>Partial solar eclipse... 20 June  , 10h49 UT (Moon 26&deg;Gem)<br>Partial solar eclipse... 19 July  , 17h48 UT (Moon 24&deg;Cnc)<br>Annular solar eclipse... 14 December  , 15h23 UT (Moon 21.6&deg;Sgr)<br>
